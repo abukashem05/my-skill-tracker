@@ -25,14 +25,14 @@ window.onload = function () {
     }
 
     if (!id) {
-        window.location.href = '../home.html'; // Adjusted path for subfolder
+        window.location.href = '../index.html'; // Adjusted path for subfolder
         return;
     }
 
     const skill = skillsData.find(s => s.id === id);
 
     if (!skill) {
-        document.body.innerHTML = '<div class="text-center p-10"><h1>Skill not found</h1><a href="home.html" class="text-blue-600 underline">Go Home</a></div>';
+        document.body.innerHTML = '<div class="text-center p-10"><h1>Skill not found</h1><a href="index.html" class="text-blue-600 underline">Go Home</a></div>';
         return;
     }
 

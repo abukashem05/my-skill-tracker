@@ -33,7 +33,7 @@ let template = fs.readFileSync(templatePath, 'utf8');
 // Fix paths for subdirectory (css/ -> ../css/, js/ -> ../js/)
 template = template.replace(/href="css\//g, 'href="../css/');
 template = template.replace(/src="js\//g, 'src="../js/');
-template = template.replace(/href="home.html"/g, 'href="../home.html"');
+template = template.replace(/href="home.html"/g, 'href="../index.html"');
 
 // Ensure output directory exists
 const outputDir = path.join(__dirname, 'skills');

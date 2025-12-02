@@ -18,14 +18,14 @@ function checkAuth() {
         }
     } else if (isLoggedIn && isLoginPage) {
         // Redirect to home if already logged in and on login page
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     }
 }
 
 function login(username, password) {
     if (username === CREDENTIALS.username && password === CREDENTIALS.password) {
         localStorage.setItem('isLoggedIn', 'true');
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
         return true;
     } else {
         alert("Invalid credentials!");

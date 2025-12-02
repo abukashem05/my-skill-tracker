@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    /* Slate 50 */
+    color: #0f172a;
+    /* Slate 900 */
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #0f172a;
+    /* Slate 900 */
+    color: #f8fafc;
+    /* Slate 50 */
+}
+
+.skill-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    /* Slate 200 */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+    touch-action: none;
+}
+
+body.dark .skill-card {
+    background: #1e293b;
+    /* Slate 800 */
+    border-color: #334155;
+    /* Slate 700 */
+    color: #f8fafc;
+}
+
+.skill-card:not(.physics-mode):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-color: #cbd5e1;
+    /* Slate 300 */
+    cursor: pointer;
+}
+
+/* Physics Mode Overrides */
+body.physics-active {
+    overflow: hidden;
+    height: 100vh;
+}
+
+body.physics-active .skill-card {
+    position: absolute;
+    transition: none;
+    z-index: 10;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Minimalist Panel */
+.glass-panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+body.dark .glass-panel {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.checkbox-wrapper input:checked+div {
+    background-color: #0f172a;
+    /* Slate 900 */
+    border-color: #0f172a;
+}
+
+.checkbox-wrapper input:checked+div svg {
+    display: block;
+}
+
+/* Modal Animation */
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
+
+.modal-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: all 0.15s ease-in;
+}
